@@ -35,7 +35,7 @@ function getPokemonDetails(name: string) {
             htmlD += `<b> name: </b> ${pokemon.name}`;
             htmlD += `<img src='${pokemon.sprites.front_default}' class='rounded-circle' ></img>`;
             htmlD += `<b> weight: </b> ${pokemon.weight} `;
-            htmlD += ` <b> abilities: </b>: <ul style='list-style-type:square'> `;
+            htmlD += ` <b> abilities: </b>: <ul style='list-style-type:square'> ` ;
 
             for (const abilitie of pokemon.abilities) {
 
