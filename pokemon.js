@@ -16,7 +16,7 @@ function buildPokemonList() {
             for (const pokemon of pokelist.results) {
                 html += `<tr>`;
                 html += `<td> ${pokemon.name} </td>`;
-                html += `<td> <input type='button' onclick="getPokemonDetails('${pokemon.name}');window.open('pokemon_details.html')" value='details' class='btn btn-dark'>   </td>`;
+                html += `<td> <input type='button' onclick="location.href='pokemon_details.html?id=${pokemon.name}'" value='details' class='btn btn-dark'>   </td>`;
                 html += `</tr>`;
             }
             html += `</table>`;
@@ -24,24 +24,4 @@ function buildPokemonList() {
         });
     })();
 }
-//Open the details page and show the pokemon- details
-function getPokemonDetails(name) {
-    let htmlD = ' ';
-    (function () {
-        return __awaiter(this, void 0, void 0, function* () {
-            const pokelist = yield $.get('https://pokeapi.co/api/v2/pokemon/' + name + '/');
-            for (const pokemon of pokelist.results) {
-                htmlD += `<b> name: </b> ${pokemon.name}`;
-                htmlD += `<img src='${pokemon.sprites.front_default}' class='rounded-circle' ></img>`;
-                htmlD += `<b> weight: </b> ${pokemon.weight} `;
-                htmlD += ` <b> abilities: </b>: <ul style='list-style-type:square'> `;
-                for (const abilitie of pokemon.abilities) {
-                    htmlD += `${abilitie}`;
-                }
-                htmlD += `</ul>`;
-            }
-            htmlD += `<input type='button' onclick="window.open('pokemon_list.html')" value='Back to the list' class='btn btn-dark'>`;
-            $('#pokemonDetails')[0].innerHTML = htmlD;
-        });
-    })();
-}
+buildPokemonList();
