@@ -8,9 +8,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 $(document).ready(function () {
-    getPokemonDetails();
-});
-function getPokemonDetails() {
     (function () {
         return __awaiter(this, void 0, void 0, function* () {
             let name = sessionStorage.getItem('pokemon');
@@ -28,4 +25,4 @@ function getPokemonDetails() {
             $('#details')[0].innerHTML = html;
         });
     })();
-}
+});

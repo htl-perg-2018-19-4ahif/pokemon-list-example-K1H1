@@ -7,7 +7,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-function buildPokemonList() {
+$(document).ready(function () {
     (function () {
         return __awaiter(this, void 0, void 0, function* () {
             const pokelist = yield $.get('https://pokeapi.co/api/v2/pokemon/');
@@ -23,5 +23,4 @@ function buildPokemonList() {
             $('#pokemon')[0].innerHTML = html;
         });
     })();
-}
-buildPokemonList();
+});

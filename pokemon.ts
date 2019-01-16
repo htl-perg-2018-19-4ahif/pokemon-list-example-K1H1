@@ -1,5 +1,6 @@
 
-function buildPokemonList() {
+$(document).ready(function() {
+  
     (async function () {
         const pokelist = await $.get('https://pokeapi.co/api/v2/pokemon/');
 
@@ -18,6 +19,6 @@ function buildPokemonList() {
         $('#pokemon')[0].innerHTML = html;
     })();
 
-}
 
-buildPokemonList();
+
+});
