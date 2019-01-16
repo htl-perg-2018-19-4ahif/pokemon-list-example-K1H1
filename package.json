@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/htl-perg-2018-19-4ahif/pokemon-list-example-K1H1#readme",
   "devDependencies": {
-    "@types/jquery": "^3.3.27",
+    "@types/jquery": "^3.3.29",
     "@types/node": "^10.12.14",
     "browser-sync": "^2.26.3",
     "typescript": "^3.2.2"

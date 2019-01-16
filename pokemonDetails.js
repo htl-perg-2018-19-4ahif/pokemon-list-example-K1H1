@@ -7,6 +7,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+$(document).ready(function () {
+    getPokemonDetails();
+});
 function getPokemonDetails() {
     (function () {
         return __awaiter(this, void 0, void 0, function* () {
@@ -26,4 +29,3 @@ function getPokemonDetails() {
         });
     })();
 }
-getPokemonDetails();

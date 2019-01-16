@@ -1,4 +1,6 @@
-function getPokemonDetails() {
+
+$(document).ready(function() {
+  
 
     (async function () {
         let name = sessionStorage.getItem('pokemon');
@@ -21,6 +23,5 @@ function getPokemonDetails() {
         $('#details')[0].innerHTML = html;
 
     })();
-}
 
-getPokemonDetails();
+});
